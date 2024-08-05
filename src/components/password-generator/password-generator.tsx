@@ -72,12 +72,6 @@ const PasswordGenerator: React.FC = () => {
       ...prevOptions,
       [name]: checked,
     }));
-    const newPassword = generatePassword(length, {
-      ...options,
-      [name]: checked,
-    });
-    setPassword(newPassword);
-    setStrength(getPasswordStrength(length));
   };
 
   const getStrengthBarColor = (strength: string, index: number) => {
